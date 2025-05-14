@@ -1,1 +1,1 @@
-from app.schemas.user import UserBase, UserCreate, UserUpdate
+from app.schemas.common import DummyRow
