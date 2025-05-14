@@ -1,18 +1,79 @@
-# fastapi-template
-template for all fastApi projects
+# 🏠 House Price Prediction API
 
-1. Build the Docker Image
-```
-docker build -t house-price-prediction .
+This is a FastAPI-based project template designed for containerized deployment. The API can be used as a starting point for building machine learning or RESTful applications with Docker.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/fastapi-template.git
+cd fastapi-template
 ```
 
-2. Run the Docker Container
-```
-docker run -p 8000:8000 house-price-prediction
+---
+
+## ▶️ Run Locally (Without Docker)
+
+To run the app locally using `uvicorn`, you'll need to install the required Python dependencies.
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
 ```
 
-3. Access the App in Browser
+Then, use the `start.sh` script to start the app:
+
+```bash
+./start.sh
+```
+
+Visit the app at:
+
 ```
 http://127.0.0.1:8000/health
 ```
+
+Expected output:
+
+```json
+{"status":"success","message": "System up"}
+```
+
+---
+
+## 🐳 Run with Docker
+
+To build and run the app using Docker, make the `run_docker.sh`executable:
+
+```bash
+chmod +x run_docker.sh
+```
+and then run
+
+```bash
+./run_docker.sh
+```
+
+Visit the app at:
+
+```
+http://127.0.0.1:8000/health
+```
+
+Expected output:
+
+```json
+{"status":"success","message": "System up"}
+```
+
+---
+
+## 📦 Requirements
+
+- [Docker](https://www.docker.com/) — for containerized deployment
+- [Python 3.8+](https://www.python.org/) — only required for local development
 
