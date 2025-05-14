@@ -69,6 +69,10 @@ Expected output:
 ```json
 {"status":"success","message": "System up"}
 ```
+## 📄 Checkout the API docs at
+```
+http://127.0.0.1:8000/docs
+```
 
 ---
 
