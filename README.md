@@ -1,6 +1,6 @@
 # 🏠 House Price Prediction API
 
-This is a FastAPI-based project template designed for containerized deployment. The API can be used as a starting point for building machine learning or RESTful applications with Docker.
+This is a FastAPI-based project designed for containerized deployment. The API can be used as a starting point for building machine learning or RESTful applications with Docker.
 
 ---
 
@@ -9,8 +9,8 @@ This is a FastAPI-based project template designed for containerized deployment. 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fastapi-template.git
-cd fastapi-template
+git clone https://github.com/your-username/house-price-prediction.git
+cd house-price-prediction
 ```
 
 ---

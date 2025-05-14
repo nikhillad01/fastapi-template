@@ -7,10 +7,10 @@ from app.api.v1.v1_router import v1_router
 
 
 app = FastAPI(
-    title="FastAPI template",
+    title="House Price Prediction API",
     version="1.0.0",
     # docs_url=None,
-    description="template for all fastapi projects",
+    description="APIs",
 )
 
 app.add_middleware(
@@ -27,17 +27,17 @@ async def health():
     return {"status":"success","message": "System up"}
 
 
-@app.get("api/fastapi-template/v1/docs", include_in_schema=False)
+@app.get("api/house-price-prediction/v1/docs", include_in_schema=False)
 async def get_documentation():
     return get_swagger_ui_html(
-        openapi_url="api/fastapi-template/v1/docs/openapi.json",
-        title="FastAPI template",
+        openapi_url="api/house-price-prediction/v1/docs/openapi.json",
+        title="House Price Prediction API",
     )
 
 
-@app.get("api/fastapi-template/v1/docs/openapi.json", include_in_schema=False)
+@app.get("api/house-price-prediction/v1/docs/openapi.json", include_in_schema=False)
 async def openapi():
-    return get_openapi(title="FastAPI template", version=app.version, routes=app.routes)
+    return get_openapi(title="House Price Prediction API", version=app.version, routes=app.routes)
 
 
 app.include_router(
