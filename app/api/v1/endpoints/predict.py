@@ -1,14 +1,16 @@
-from typing import List
+from fastapi import APIRouter, Depends
 
-from fastapi import APIRouter
-from app.schemas import DummyRow
-
-import pandas as pd
-
+from app.schemas import HouseData
+from app.services.predictor import PredictorService
+from app.dependencies import get_predictor_service
 
 router = APIRouter()
 
+
 @router.post("")
-async def convert_to_dataframe(data: List[DummyRow]):
-    df = pd.DataFrame([row.dict() for row in data])
-    return df.head().to_dict(orient="records")
+async def predict_price(
+    data: HouseData,
+    predictor: PredictorService = Depends(get_predictor_service)
+):
+    predicted_price = predictor.predict(data)
+    return {"predicted_price_per_unit_area": round(predicted_price, 2)}

@@ -1,1 +1,1 @@
-from app.schemas.common import DummyRow
+from app.schemas.prediction import HouseData
