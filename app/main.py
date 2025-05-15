@@ -5,11 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1.v1_router import v1_router
 
 
-
 app = FastAPI(
     title="House Price Prediction API",
     version="1.0.0",
-    # docs_url=None,
     description="APIs",
 )
 
