@@ -1,83 +1,55 @@
-# 🏠 House Price Prediction API
+# House Price Prediction API
 
-This is a FastAPI-based project designed for containerized deployment. The API can be used as a starting point for building machine learning or RESTful applications with Docker.
+This is a FastAPI-based application that predicts house prices per unit area based on various input features like house age, distance to MRT, etc.
 
----
+## 🚀 Features
 
-## 🚀 Getting Started
+- REST API with FastAPI
+- Machine learning model using scikit-learn
+- Swagger UI for testing
+- Dockerized deployment
 
-### 1. Clone the Repository
+## 🧰 Requirements
 
-```bash
-git clone https://github.com/your-username/house-price-prediction.git
-cd house-price-prediction
-```
+- Python 3.9+
+- pip
+- Optional: Docker
 
----
+## 📦 Installation (Local)
 
-## ▶️ Run Locally (Without Docker)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/house-price-prediction.git
+   cd house-price-prediction
+   ```
 
-To run the app locally using `uvicorn`, you'll need to install the required Python dependencies.
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-### Install Dependencies
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+4. Run the API:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
 
-Then, use the `start.sh` script to start the app:
-
-```bash
-./start.sh
-```
-
-Visit the app at:
-
-```
-http://127.0.0.1:8000/health
-```
-
-Expected output:
-
-```json
-{"status":"success","message": "System up"}
-```
-
----
+5. Visit:  
+   - Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)  
+   - Redoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
 ## 🐳 Run with Docker
 
-To build and run the app using Docker, make the `run_docker.sh`executable:
+To build and run the app using Docker:
 
 ```bash
-chmod +x run_docker.sh
-```
-and then run
-
-```bash
-./run_docker.sh
+docker build -t house-price-prediction .
+docker run -p 8000:8000 house-price-prediction
 ```
 
-Visit the app at:
-
-```
-http://127.0.0.1:8000/health
-```
-
-Expected output:
-
-```json
-{"status":"success","message": "System up"}
-```
-## 📄 Checkout the API docs at
-```
-http://127.0.0.1:8000/docs
-```
-
----
-
-## 📦 Requirements
-
-- [Docker](https://www.docker.com/) — for containerized deployment
-- [Python 3.8+](https://www.python.org/) — only required for local development
-
+Then visit: [http://localhost:8000/docs](http://localhost:8000/docs)
