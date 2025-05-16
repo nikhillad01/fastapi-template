@@ -1,1 +1,1 @@
-from app.schemas.prediction import HouseData
+from app.schemas.prediction import HouseDataInput, HouseDataInternal
