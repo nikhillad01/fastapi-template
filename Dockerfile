@@ -24,11 +24,11 @@ RUN apk update && apk add --no-cache \
 
 # Install Python dependencies
 COPY ./requirements.txt .
-RUN pip install --upgrade pip setuptools==75.1.0 && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --upgrade pip setuptools==75.1.0 && \
+    pip3 install --no-cache-dir -r requirements.txt
 
 # Copy app code
-COPY ./app /code/app
+COPY ./ /code
 
 # Create non-root user
 RUN adduser -u 997 -D app && chown -R app:app /code

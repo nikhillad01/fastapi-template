@@ -75,5 +75,6 @@ uvicorn==0.34.2
 watchfiles==1.0.5
 wcwidth==0.2.13
 websockets==15.0.1
-xgboost==3.0.1
+# cmake
+# xgboost==3.0.1
 yellowbrick==1.5
